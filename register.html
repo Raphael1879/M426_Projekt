@@ -2,19 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Register</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="container">
-      <h1>Login</h1>
+      <h1>Register</h1>
     </header>
 
 
     <div class="container">
-      <form class="" action="index.html" method="post">
+      <form class="" action="index.html" method="post" id="form">
         <!--User Name-->
         <div class="form-group">
           <label for="inputUsername">Username</label>
@@ -33,6 +33,7 @@
           <select class="custom-select custom-select-sm" id="inputRole" name="inputRole">
             <option selected>Open this select menu</option>
             <option value="Scrum-Coach">Scrum-Coach</option>
+            <option value="Scrum-Coach">Projektleiter</option>
           </select>
         </div>
 
@@ -40,18 +41,15 @@
         <div class="form-group">
           <label for="inputPassword">Password</label>
           <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="inputPassword">
-          <small id="passwordHelpInline" class="text-muted">Must be 8 characters long, and contain atleast 1 uppercase letter and number.</small>
         </div>
         <div class="form-group">
           <label for="inputConfirmPassword">Confirm Password</label>
           <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password" name="inputConfirmPassword">
-          <small id="confirmPasswordHelpInline" class="text-muted">Must be 8 characters long, and contain atleast 1 uppercase letter and number.</small>
         </div>
 
-        <!--Register and Login Button-->
+        <!--Register Button-->
         <div class="form-group">
-          <button type="button" class="btn btn-primary" id="btnlogin" name="button">Login</button>
-          <button type="button" class="btn btn-secondary" id="btnregister" name="button">Register</button>
+          <button type="submit" class="btn btn-info" id="btnregister" name="button">Register</button>
         </div>
       </form>
     </div>
@@ -61,6 +59,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
-    <script src="validate.js"></script>
+    <script src="js/validate.js"></script>
   </body>
 </html>
