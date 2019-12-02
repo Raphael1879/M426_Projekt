@@ -1,12 +1,13 @@
 <?php
 
+session_start();
+
 $benutzername = $_GET['inputUsername'];
 $password = $_GET['inputPassword'];
 
+$_SESSION['inputUsername'] = $benutzername;
+$_SESSION['inputPassword'] = $password;
 
-if (isset($benutzername) && isset($password)) {
 
-  echo "Hallo " . $benutzername . " dein Passwort lautet " . $password;
-}
-
- ?>
+include "footer.php";
+?>
