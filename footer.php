@@ -12,7 +12,8 @@
       <div class="jumbotron">
         <h1>Benutzerinformationen</h1>
         <article>
-           <?php echo "<h4> Dein Benutzername lautet: " . $_SESSION['inputUsername'] . "<br>" . "und dein Passwort: " . $_SESSION['inputPassword'] . "</h4>"; ?>
+           <?php echo "<h4> Dein Benutzername lautet: " . $_SESSION['inputUsername'] . "<br>" . "und dein Passwort: " . $_SESSION['inputPassword'] . "</h4>";
+                 echo "<h4> Dein Rolle ist: " . $_SESSION['inputRole'] . "</h4>";?>
         </article>
       </div>
     </header>
