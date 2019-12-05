@@ -89,18 +89,17 @@ body{
 }
 
 .textbox select {
-  width: 200px;
+  width: 250px;
   position: relative;
 }
 
 .textbox select::before {
   font-family: fontello;
-  content: "";
   font-size: 20px;
   position: absolute;
   right: 15px;
   top: 10px;
-  color: #fff;
+  color: white;
   pointer-events: none;
 }
 
