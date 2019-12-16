@@ -16,7 +16,9 @@ $select = "insert into person(username, email, rolle, passwort) values('$benutze
 mysqli_real_query($connection, $select);
 
 if ($connection) {
-    echo "Fehler: konnte nicht mit MySQL verbinden.";
+
+    echo "Sie haben sich registriert";
+    echo "<a href='../pages/login.html'>Weiterleitung zum Login</a>";
     exit;
 }
 
