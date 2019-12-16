@@ -1,11 +1,27 @@
 <?php
 session_start ();
 $benutzername = $_GET['inputUsername'];
-$password = $_GET['inputPassword'];
+$email = $_GET['inputEmail'];
 $rolle = $_GET['inputRole'];
-$_SESSION['inputUsername'] = $benutzername;
+$password = $_GET['inputPassword'];
+
+
+/*$_SESSION['inputUsername'] = $benutzername;
 $_SESSION['inputPassword'] = $password;
 $_SESSION['inputRole'] = $rolle;
+*/
+
+$connection = mysqli_connect("127.0.0.1", "admin", "Admin123", "m426");
+$select = "insert into person(username, email, rolle, passwort) values('$benutzername', '$email', '$rolle', '$password' )";
+mysqli_real_query($connection, $select);
+
+if ($connection) {
+    echo "Fehler: konnte nicht mit MySQL verbinden.";
+    exit;
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -21,8 +37,7 @@ $_SESSION['inputRole'] = $rolle;
       <div class="jumbotron">
         <h1>Benutzerinformationen</h1>
         <article>
-          <?php echo "<h4> Ihr Benutzername ist: " . $_SESSION['inputUsername'] . "<br>" . "Ihr Passwort ist: " . $_SESSION['inputPassword'] . "</h4>";
-                echo "<h4> Sie sind ein: " . $_SESSION['inputRole'] . "</h4>";?>
+
         </article>
       </div>
     </header>
