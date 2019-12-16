@@ -10,7 +10,7 @@ $row = mysqli_fetch_array($data);
 if($row[1] == $benutzername && $row[4] == $password){
   echo "user exist";
 } else {
-  header('Location: index.html');
+  header('Location: ../index.html');
 }
 
  ?>
